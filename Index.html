@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battlefield 2042 | Air & Ground Warfare</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════
+       NAVBAR  (Bootstrap Navbar + Dropdown)
+  ════════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container-fluid px-3 px-lg-5">
+
+      <!-- Brand -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="brand-badge">BF</span>
+        <span class="brand-text">BATTLEFIELD <span>2042</span></span>
+      </a>
+
+      <!-- Toggler for mobile -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-lg-1">
+
+          <!-- Bootstrap DROPDOWN - Game -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+              <i class="fa fa-gamepad me-1"></i> Game
+            </a>
+            <ul class="dropdown-menu bf-dropdown">
+              <li><a class="dropdown-item" href="#trailer"><i class="fa fa-play me-2"></i>Official Trailer</a></li>
+              <li><a class="dropdown-item" href="#modes"><i class="fa fa-list me-2"></i>War Modes</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loreModal"><i class="fa fa-book me-2"></i>Game Lore</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#gallery"><i class="fa fa-images me-1"></i>Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#armoury"><i class="fa fa-shield-halved me-1"></i>Armoury</a></li>
+          <li class="nav-item"><a class="nav-link" href="#enlist"><i class="fa fa-user-plus me-1"></i>Enlist</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partner"><i class="fa fa-handshake me-1"></i>Partner</a></li>
+
+          <!-- Bootstrap DROPDOWN - Support -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Support</a>
+            <ul class="dropdown-menu bf-dropdown">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#tcModal"><i class="fa fa-file-contract me-2"></i>Terms & Conditions</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="fa fa-envelope me-2"></i>Contact Us</a></li>
+              <li><a class="dropdown-item" href="#faq"><i class="fa fa-circle-question me-2"></i>FAQ</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+          <a href="#" class="btn btn-outline-light btn-sm px-3"
+             data-bs-toggle="modal" data-bs-target="#loginModal">LOGIN</a>
+          <a href="#" class="btn btn-primary-cta btn-sm px-3"
+             data-bs-toggle="modal" data-bs-target="#playModal">PLAY NOW</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════ -->
+  <section class="hero-section" id="game">
+    <div class="hero-overlay"></div>
+    <img src=".jpg"
+         alt="Battlefield 2042 Hero" class="hero-bg" />
+    <div class="hero-content container">
+
+      <!-- Bootstrap BREADCRUMB -->
+      <nav aria-label="breadcrumb" class="hero-breadcrumb mb-3">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Games</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Battlefield 2042</li>
+        </ol>
+      </nav>
+
+      <h1 class="hero-title">BATTLEFIELD<br /><span>2042</span></h1>
+      <p class="hero-sub">Enter the battlefield and dominate with strategy, power and skill.</p>
+
+      <div class="d-flex flex-wrap gap-3 mt-4">
+        <a href="#trailer" class="btn btn-hero">EXPLORE NOW</a>
+        <a href="#" class="btn btn-outline-warning px-4"
+           data-bs-toggle="modal" data-bs-target="#playModal">
+          <i class="fa fa-play me-2"></i>PLAY BETA
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ALERT RIBBON  (Bootstrap Alert)
+  ════════════════════════════════════════ -->
+  <div class="alert-ribbon">
+    <div class="container-fluid">
+      <div class="alert alert-dark bf-alert d-flex align-items-center justify-content-between mb-0 px-4 py-2" role="alert">
+        <span><i class="fa fa-bell me-2 text-warning"></i><strong>Season 7 LIVE:</strong> New map "Orbital Strike" now available!</span>
+        <button type="button" class="btn-close btn-close-white btn-sm" data-bs-dismiss="alert"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       TRAILER  (Bootstrap Responsive Grid)
+  ════════════════════════════════════════ -->
+  <section class="section-dark py-5" id="trailer">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Video column -->
+        <div class="col-12 col-lg-7">
+          <h2 class="section-title mb-4"><i class="fa fa-film me-2"></i>Official War Trailer</h2>
+          <div class="video-wrapper">
+            <video controls poster="https://i.ytimg.com/vi/m-9oB_BRVOk/maxresdefault.jpg">
+              <source src=".mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+        </div>
+
+        <!-- Info column -->
+        <div class="col-12 col-lg-5">
+          <div class="trailer-info-box">
+            <span class="badge bf-badge mb-3">NEW SEASON</span>
+            <h3 class="trailer-info-title">Zero Hour — Season 7</h3>
+            <p class="trailer-info-desc">
+              A rogue AI has taken control of the world's nuclear arsenal.
+              Specialists must infiltrate the Orbital Strike station before global annihilation begins.
+            </p>
+            <ul class="trailer-features list-unstyled">
+              <li><i class="fa fa-check-circle text-success me-2"></i>New Map: Orbital Strike</li>
+              <li><i class="fa fa-check-circle text-success me-2"></i>New Specialist: "Ghost"</li>
+              <li><i class="fa fa-check-circle text-success me-2"></i>Weapon: XM8 Assault Rifle</li>
+              <li><i class="fa fa-check-circle text-success me-2"></i>100+ Battle Pass Rewards</li>
+            </ul>
+            <button class="btn btn-primary-cta mt-3 w-100"
+                    data-bs-toggle="modal" data-bs-target="#playModal">
+              <i class="fa fa-rocket me-2"></i>JOIN SEASON 7
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       WAR MODES  (Bootstrap Table)
+  ════════════════════════════════════════ -->
+  <section class="section-darker py-5" id="modes">
+    <div class="container">
+
+      <!-- Bootstrap BREADCRUMB -->
+      <nav aria-label="section-breadcrumb" class="mb-4">
+        <ol class="breadcrumb bf-breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">War Modes</li>
+        </ol>
+      </nav>
+
+      <h2 class="section-title text-center mb-4">War Modes</h2>
+      <div class="table-responsive">
+        <table class="table war-table">
+          <thead>
+            <tr><th>Mode</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Conquest BR</td><td>Capture and control key locations across the battlefield</td></tr>
+            <tr><td>Team Deathmatch</td><td>Fast-paced combat between two teams</td></tr>
+            <tr><td>Operations</td><td>Large-scale missions with strategic objectives</td></tr>
+            <tr><td>Survival</td><td>Fight endless enemy waves and survive</td></tr>
+            <tr><td>Gun Game</td><td>Progress through a series of weapons and abilities</td></tr>
+            <tr><td>Quick Match</td><td>Fast-paced combat between two teams</td></tr>
+            <tr><td>Sniper Training</td><td>Practice precision shooting and long-range combat</td></tr>
+            <tr><td>Capture the Flag</td><td>Control the enemy flag and return it to your base</td></tr>
+            <tr><td>Zombie Mode</td><td>Survive waves of zombie enemies</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-center mt-5 mb-4">Vehicles</h2>
+      <div class="table-responsive">
+        <table class="table war-table">
+          <thead>
+            <tr><th>Vehicle</th><th>Use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Fighter Jet</td><td>Air superiority and bombing missions</td></tr>
+            <tr><td>Tank</td><td>Heavy ground assault</td></tr>
+            <tr><td>Helicopter</td><td>Quick deployment and aerial attacks</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       STATS  (Bootstrap Grid)
+  ════════════════════════════════════════ -->
+  <section class="section-dark py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">By The Numbers</h2>
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-num">128</div>
+            <div class="stat-label">Players / Match</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-num">22+</div>
+            <div class="stat-label">Battle Maps</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-num">80+</div>
+            <div class="stat-label">Weapons</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-num">12M+</div>
+            <div class="stat-label">Active Players</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       GALLERY  (CSS auto-scroll)
+  ════════════════════════════════════════ -->
+  <section class="section-darker py-5" id="gallery">
+    <div class="container-fluid">
+      <h2 class="section-title text-center mb-4">Battlefield Gallery</h2>
+      <div class="gallery-track-wrapper">
+        <div class="gallery-track">
+          <div class="gallery-card"><img src=".jpg" alt="Air Strike" /><p>Air Strike Mission</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Surgical Strike" /><p>Surgical Strike</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Ground Assault" /><p>Ground Assault</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Naval" /><p>Naval Operations</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Night Vision" /><p>Night Vision</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Desert Storm" /><p>Desert Storm</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Arctic" /><p>Arctic Warfare</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Urban" /><p>Urban Combat</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Cyber" /><p>Cyber Warfare</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Ocean" /><p>Ocean Patrol</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Infantry" /><p>Infantry Ops</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Esports" /><p>Esports Arena</p></div>
+          <!-- duplicates for seamless loop -->
+          <div class="gallery-card"><img src=".jpg" alt="Air Strike" /><p>Air Strike Mission</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Surgical Strike" /><p>Surgical Strike</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Ground Assault" /><p>Ground Assault</p></div>
+          <div class="gallery-card"><img src=".jpg" alt="Naval" /><p>Naval Operations</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ARMOURY  (scroll carousel)
+  ════════════════════════════════════════ -->
+  <section class="section-armoury py-5" id="armoury">
+    <div class="container-fluid">
+      <h2 class="section-title text-center mb-2">Armoury Inventory</h2>
+
+      <h4 class="armoury-cat text-center mt-4 mb-3">Aircraft</h4>
+      <div class="armoury-scroll-wrapper">
+        <button class="armoury-arrow left" onclick="document.getElementById('aircraft').scrollLeft -= 240"><i class="fa fa-chevron-left"></i></button>
+        <div class="armoury-row" id="aircraft">
+          <div class="armoury-card"><img src=".jpg" alt="F-22" /><span>F-22 Raptor</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="F-35" /><span>F-35 Lightning</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="Felon" /><span>SU-57 Felon</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="B-2" /><span>B-2 Spirit</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="F-15" /><span>F-15 Eagle</span></div>
+        </div>
+        <button class="armoury-arrow right" onclick="document.getElementById('aircraft').scrollLeft += 240"><i class="fa fa-chevron-right"></i></button>
+      </div>
+
+      <h4 class="armoury-cat text-center mt-5 mb-3">Tanks</h4>
+      <div class="armoury-scroll-wrapper">
+        <button class="armoury-arrow left" onclick="document.getElementById('tanks').scrollLeft -= 240"><i class="fa fa-chevron-left"></i></button>
+        <div class="armoury-row" id="tanks">
+          <div class="armoury-card"><img src=".jpg" alt="Abrams" /><span>M1A2 Abrams</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="T-90" /><span>T-90M</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="Leclerc" /><span>Leclerc</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="Challenger" /><span>Challenger 3</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="Leopard" /><span>Leopard 2A7</span></div>
+        </div>
+        <button class="armoury-arrow right" onclick="document.getElementById('tanks').scrollLeft += 240"><i class="fa fa-chevron-right"></i></button>
+      </div>
+
+      <h4 class="armoury-cat text-center mt-5 mb-3">Warships</h4>
+      <div class="armoury-scroll-wrapper">
+        <button class="armoury-arrow left" onclick="document.getElementById('warships').scrollLeft -= 240"><i class="fa fa-chevron-left"></i></button>
+        <div class="armoury-row" id="warships">
+          <div class="armoury-card"><img src=".jpg" alt="Zumwalt" /><span>Zumwalt</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="Burke" /><span>Burke</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="Ford" /><span>Gerald R. Ford</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="Queen" /><span>HMS Queen</span></div>
+          <div class="armoury-card"><img src=".jpg" alt="Vikrant" /><span>INS Vikrant</span></div>
+        </div>
+        <button class="armoury-arrow right" onclick="document.getElementById('warships').scrollLeft += 240"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ENLIST FORM  (Bootstrap Form)
+  ════════════════════════════════════════ -->
+  <section class="section-darker py-5" id="enlist">
+    <div class="container">
+
+      <!-- Bootstrap BREADCRUMB -->
+      <nav aria-label="enlist-breadcrumb" class="mb-3">
+        <ol class="breadcrumb bf-breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#game">Game</a></li>
+          <li class="breadcrumb-item active">Enlist</li>
+        </ol>
+      </nav>
+
+      <h2 class="section-title text-center mb-4">
+        <i class="fa fa-address-card me-2"></i>Enlist for Battle
+      </h2>
+
+      <div class="row justify-content-center align-items-stretch g-4">
+
+        <!-- Left image -->
+        <div class="col-md-3 d-none d-md-flex align-items-center">
+          <img src=".jpg" alt="Soldier" class="enlist-img" />
+        </div>
+
+        <!-- Bootstrap FORM -->
+        <div class="col-12 col-md-6">
+          <div class="enlist-form-box">
+
+            <div class="mb-3 row align-items-center">
+              <label class="col-sm-4 form-label">Soldier Name:</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control bf-input" id="soldierName" placeholder="Enter callsign" />
+              </div>
+            </div>
+
+            <div class="mb-3 row align-items-center">
+              <label class="col-sm-4 form-label">Email:</label>
+              <div class="col-sm-8">
+                <input type="email" class="form-control bf-input" id="soldierEmail" placeholder="your@email.com" />
+              </div>
+            </div>
+
+            <!-- Bootstrap SELECT (Dropdown in Form) -->
+            <div class="mb-3 row align-items-center">
+              <label class="col-sm-4 form-label">Preferred Role:</label>
+              <div class="col-sm-8">
+                <select class="form-select bf-input" id="soldierRole">
+                  <option value="">-- Choose Role --</option>
+                  <option>Infantry</option>
+                  <option>Sniper</option>
+                  <option>Medic</option>
+                  <option>Engineer</option>
+                  <option>Pilot</option>
+                  <option>Commander</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3 row align-items-center">
+              <label class="col-sm-4 form-label">Platform:</label>
+              <div class="col-sm-8">
+                <select class="form-select bf-input">
+                  <option>PC</option>
+                  <option>PlayStation 5</option>
+                  <option>Xbox Series X</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="mb-3 row">
+              <label class="col-sm-4 form-label pt-1">Experience:</label>
+              <div class="col-sm-8">
+                <div class="d-flex flex-wrap gap-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exp" id="beginner" value="Beginner" checked />
+                    <label class="form-check-label" for="beginner">Beginner</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exp" id="skilled" value="Skilled" />
+                    <label class="form-check-label" for="skilled">Skilled</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exp" id="veteran" value="Veteran" />
+                    <label class="form-check-label" for="veteran">Veteran</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="mb-4 row">
+              <div class="col-sm-8 offset-sm-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="agreeTerms" />
+                  <label class="form-check-label small" for="agreeTerms">
+                    I agree to the
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#tcModal" class="link-warning">Terms & Conditions</a>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary-cta w-100">
+              <i class="fa fa-rocket me-2"></i>DEPLOY NOW
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Right image -->
+        <div class="col-md-3 d-none d-md-flex align-items-center">
+          <img src=".jpg" alt="Soldier" class="enlist-img" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       PARTNER CARDS  (Bootstrap Grid)
+  ════════════════════════════════════════ -->
+  <section class="section-dark py-5" id="partner">
+    <div class="container text-center">
+      <h2 class="section-title mb-1">Be Partner With Us</h2>
+      <p class="text-muted mb-5">Get premium updates and early access to the game</p>
+
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="partner-card">
+            <img src=".jpg" alt="Early Access Pack" class="partner-card-img" />
+            <h3 class="partner-card-title">Early Access Pack</h3>
+            <p class="partner-card-desc">Get early gameplay access, exclusive missions and insider updates.</p>
+            <button class="btn btn-primary-cta" style="margin:0 20px;width:calc(100% - 40px)"
+                    data-bs-toggle="modal" data-bs-target="#earlyPackModal">
+              Join for ₹499/mo
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="partner-card elite">
+            <img src=".jpg" alt="Elite Partner" class="partner-card-img" />
+            <h3 class="partner-card-title">Elite Partner</h3>
+            <p class="partner-card-desc">Unlock all features, priority updates and premium rewards.</p>
+            <button class="btn btn-primary-cta" style="margin:0 20px;width:calc(100% - 40px)"
+                    data-bs-toggle="modal" data-bs-target="#elitePackModal">
+              Join for ₹1699/mo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FAQ  (Bootstrap Accordion)
+  ════════════════════════════════════════ -->
+  <section class="section-darker py-5" id="faq">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+      <div class="accordion bf-accordion" id="faqAccordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              What platforms is Battlefield 2042 available on?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Battlefield 2042 is available on PC (Origin/Steam), PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X|S.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              How many players can join a single match?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              On PC, PlayStation 5, and Xbox Series X|S, Battlefield 2042 supports up to 128 players per match. Legacy platforms support 64 players.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Is there cross-play support?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes! Cross-play is supported between PC, PlayStation 5, and Xbox Series X|S. Legacy platforms have their own cross-play pool.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              How do I cancel my partner subscription?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              You can cancel anytime from your account dashboard. No penalties, no lock-ins. Your access continues until the end of the billing period.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container text-center py-5">
+      <p class="footer-copy mb-3">© 2026 Battlefield Command | Air & Ground Warfare Project</p>
+
+      <p class="footer-label mb-2">Join the community</p>
+      <div class="social-icons mb-4">
+        <a href="#" class="social-icon discord"  title="Discord"><i class="fab fa-discord"></i></a>
+        <a href="#" class="social-icon twitch"   title="Twitch"><i class="fab fa-twitch"></i></a>
+      </div>
+
+      <p class="footer-label mb-2">Stay tuned</p>
+      <div class="social-icons mb-4">
+        <a href="#" class="social-icon facebook"  title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon reddit"    title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+        <a href="#" class="social-icon tiktok"    title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-icon twitter"   title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="social-icon youtube"   title="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <p class="footer-label mb-2">Language</p>
+      <select class="language-select mb-4">
+        <option>English</option>
+        <option>Hindi</option>
+        <option>French</option>
+        <option>German</option>
+        <option>Spanish</option>
+      </select>
+
+      <div class="row justify-content-center mb-3">
+        <div class="col-auto">
+          <div class="footer-links">
+            <a href="#">LEGAL</a>
+            <a href="#">TERMS OF USE</a>
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">CAREERS</a>
+            <a href="#">COOKIE POLICY</a>
+            <a href="#">SUPPORT</a>
+            <a href="#">CODE OF CONDUCT</a>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mb-4">
+        <div class="col-auto">
+          <div class="footer-links">
+            <a href="#">ACTIVISION</a>
+            <a href="#">TREYARCH</a>
+            <a href="#">SLEDGEHAMMER</a>
+            <a href="#">HIGH MOON</a>
+            <a href="#">DIGITAL LEGENDS</a>
+            <a href="#">SHANGHAI STUDIO</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-copy mb-3">© 2026 Battlefield Command</p>
+      <button class="btn btn-outline-light btn-sm px-4">COOKIE SETTINGS</button>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════
+       BOOTSTRAP MODALS
+  ════════════════════════════════════════ -->
+
+  <!-- LOGIN MODAL -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bf-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-lock me-2"></i>Soldier Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Email / Gamertag</label>
+            <input type="email" class="form-control bf-input" placeholder="Enter email or gamertag" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control bf-input" placeholder="••••••••" />
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="rememberMe" />
+            <label class="form-check-label small" for="rememberMe">Remember me on this device</label>
+          </div>
+          <button class="btn btn-primary-cta w-100">ENTER THE BATTLEFIELD</button>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a href="#" class="footer-modal-link">Forgot Password?</a>
+          <span class="text-muted mx-2">|</span>
+          <a href="#" class="footer-modal-link">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAY NOW MODAL -->
+  <div class="modal fade" id="playModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bf-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-play me-2 text-warning"></i>Start Playing – Beta Access</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <h6 class="text-warning mb-3">Select Your Platform</h6>
+              <div class="d-grid gap-2">
+                <button class="btn platform-btn"><i class="fa fa-desktop me-2"></i>PC (Origin / Steam)</button>
+                <button class="btn platform-btn"><i class="fab fa-playstation me-2"></i>PlayStation 5</button>
+                <button class="btn platform-btn"><i class="fab fa-xbox me-2"></i>Xbox Series X</button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <h6 class="text-warning mb-3">Beta Details</h6>
+              <ul class="list-unstyled beta-info">
+                <li><i class="fa fa-calendar me-2 text-info"></i>Beta Period: May 10 – May 20, 2026</li>
+                <li><i class="fa fa-users me-2 text-info"></i>Max 128 Players / Match</li>
+                <li><i class="fa fa-map me-2 text-info"></i>3 Exclusive Beta Maps</li>
+                <li><i class="fa fa-gift me-2 text-info"></i>Exclusive Beta Skin Reward</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary-cta px-4">
+            <i class="fa fa-rocket me-2"></i>JOIN BETA NOW
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LORE MODAL -->
+  <div class="modal fade" id="loreModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content bf-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-book me-2 text-warning"></i>Battlefield 2042 — Game Lore</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body lore-body">
+          <h6 class="text-warning">The World of 2042</h6>
+          <p>In the near future, the world has been ravaged by climate change, economic collapse, and geopolitical instability. Nation-states have crumbled, giving rise to <strong>No-Pats</strong> — stateless soldiers for hire with no allegiance to any flag.</p>
+          <h6 class="text-warning mt-4">The Flashpoint Crisis</h6>
+          <p>Two superpowers — the <strong>United States</strong> and <strong>Russia</strong> — stand on the brink of all-out war. Both sides recruit No-Pat specialists to conduct deniable operations across the globe's most contested flashpoints.</p>
+          <h6 class="text-warning mt-4">The Specialists</h6>
+          <p>Ten elite specialists, each with unique gadgets and abilities, are deployed across seven massive maps — from the frozen tundra of Antarctica to the towering skyscrapers of Singapore.</p>
+          <div class="alert alert-warning mt-4">
+            <i class="fa fa-triangle-exclamation me-2"></i><strong>Warning:</strong> The events of Battlefield 2042 are classified. Access at your own risk, soldier.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary-cta" data-bs-dismiss="modal">Close Intel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS & CONDITIONS MODAL -->
+  <div class="modal fade" id="tcModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bf-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-file-contract me-2"></i>Terms & Conditions</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-muted">Last updated: May 2026</p>
+          <h6 class="text-warning">1. Enlistment Agreement</h6>
+          <p class="small">By enlisting, you agree to participate in simulated combat scenarios for entertainment purposes only.</p>
+          <h6 class="text-warning mt-3">2. Fair Play</h6>
+          <p class="small">Cheating or exploiting game mechanics is prohibited and will result in permanent account suspension.</p>
+          <h6 class="text-warning mt-3">3. Subscription Policy</h6>
+          <p class="small">Subscriptions renew automatically each month. You may cancel at any time. No refunds for partial months.</p>
+          <h6 class="text-warning mt-3">4. Privacy</h6>
+          <p class="small">We collect gameplay data and account details to improve your experience. We never sell your data.</p>
+          <h6 class="text-warning mt-3">5. Governing Law</h6>
+          <p class="small">These terms are governed by the laws of India. Disputes shall be resolved in Mumbai courts.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Decline</button>
+          <button type="button" class="btn btn-primary-cta" data-bs-dismiss="modal">Accept & Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bf-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-envelope me-2"></i>Contact Support</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-control bf-input" placeholder="Soldier name" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control bf-input" placeholder="your@email.com" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Issue Type</label>
+            <select class="form-select bf-input">
+              <option>Technical Issue</option>
+              <option>Billing / Subscription</option>
+              <option>Account Problem</option>
+              <option>Report a Player</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control bf-input" rows="4" placeholder="Describe your issue..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary-cta">
+            <i class="fa fa-paper-plane me-2"></i>Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EARLY ACCESS MODAL -->
+  <div class="modal fade" id="earlyPackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bf-modal">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa fa-star me-2 text-warning"></i>Early Access Pack – ₹499/mo</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled pack-features">
+            <li><i class="fa fa-check text-success me-2"></i>Early access to new seasons</li>
+            <li><i class="fa fa-check text-success me-2"></i>5 exclusive missions per month</li>
+            <li><i class="fa fa-check text-success me-2"></i>Insider newsletters &amp; dev updates</li>
+            <li><i class="fa fa-check text-success me-2"></i>Early Access badge on profile</li>
+            <li><i class="fa fa-times text-danger me-2"></i>Priority matchmaking</li>
+            <li><i class="fa fa-times text-danger me-2"></i>Premium weapon skins</li>
+          </ul>
+          <div class="mb-3 mt-3">
+            <label class="form-label">Payment Method</label>
+            <select class="form-select bf-input">
+              <option>Credit / Debit Card</option>
+              <option>UPI</option>
+              <option>Net Banking</option>
+              <option>Wallets (Paytm, PhonePe)</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary-cta px-4" data-bs-dismiss="modal">
+            <i class="fa fa-shield-halved me-2"></i>Subscribe ₹499/mo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELITE PACK MODAL -->
+  <div class="modal fade" id="elitePackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bf-modal">
+        <div class="modal-header" style="border-color:var(--accent-gold)">
+          <h5 class="modal-title" style="color:var(--accent-gold)"><i class="fa fa-crown me-2"></i>Elite Partner – ₹1699/mo</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled pack-features">
+            <li><i class="fa fa-check text-success me-2"></i>Everything in Early Access</li>
+            <li><i class="fa fa-check text-success me-2"></i>Priority matchmaking</li>
+            <li><i class="fa fa-check text-success me-2"></i>5 premium weapon skins/month</li>
+            <li><i class="fa fa-check text-success me-2"></i>Exclusive Elite Partner badge</li>
+            <li><i class="fa fa-check text-success me-2"></i>Monthly ₹200 in-game credits</li>
+            <li><i class="fa fa-check text-success me-2"></i>Direct developer Q&amp;A access</li>
+          </ul>
+          <div class="mb-3 mt-3">
+            <label class="form-label">Payment Method</label>
+            <select class="form-select bf-input">
+              <option>Credit / Debit Card</option>
+              <option>UPI</option>
+              <option>Net Banking</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer" style="border-color:rgba(255,215,0,0.15)">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary-cta px-4"
+                  style="background:var(--accent-gold);color:#000" data-bs-dismiss="modal">
+            <i class="fa fa-crown me-2"></i>Go Elite ₹1699/mo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (required for Navbar, Modal, Accordion, Dropdown to work) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
